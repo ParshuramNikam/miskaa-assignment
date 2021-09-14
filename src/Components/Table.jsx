@@ -45,22 +45,14 @@ const Table = () => {
                                         <td>{country.subregion}</td>
                                         <td>{country.population}</td>
                                         <td>
-                                            <ol>{
-                                                country.borders.map((border) => {
-                                                    return (
-                                                        <li key={border}>{border}</li>
-                                                    )
-                                                })
-                                            }</ol>
+                                            <ol> { country.borders.map((border) => {
+                                                    return ( <li key={border}>{border}</li> )
+                                            })} </ol>
                                         </td>
                                         <td>
-                                            <ol>{
-                                                country.languages.map((language) => {
-                                                    return (
-                                                        <li key={language.name}>{language.name} ({language.nativeName})</li>
-                                                    )
-                                                })
-                                            }</ol>
+                                            <ol> { country.languages.map((language) => {
+                                                    return ( <li key={language.name}>{language.name} ({language.nativeName})</li> )
+                                            }) }</ol>
                                         </td>
                                     </tr>
                                 )
